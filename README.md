@@ -18,3 +18,11 @@ k = 4.5
 ![image](https://github.com/user-attachments/assets/491cb8f8-7a19-4593-8538-ddb1b0736e73)
 k = 5 
 ![image](https://github.com/user-attachments/assets/82169daf-58d2-4f62-b0bf-f77cd98d7ff2)
+
+k = 5 
+ademas, este tiene el codigo/formula cambiada 
+![image](https://github.com/user-attachments/assets/6f40dc10-ac29-4c5f-a416-afb8ac182a7b)
+r = a * np.cos(k * t)  # esto controla el número de pétalos
+        x = int(center_x + r * np.cos(t))
+        y = int(center_y + r * np.sin(t))
+ese es el nuevo codigo usado 
