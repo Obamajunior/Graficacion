@@ -8,7 +8,7 @@ img = np.ones((height, width, 3), dtype=np.uint8)*255
 
 # Parámetros de la curva de Limacon
 a, b = 150, 100  # Reducir los valores de a y b para que la curva se ajuste mejor
-k = 0.5# Constante de multiplicación del ángulo
+k = 5# Constante de multiplicación del ángulo
 theta_increment = 0.05  # Incremento del ángulo
 max_theta = 2 * np.pi  # Un ciclo completo
 
@@ -24,9 +24,10 @@ while True:  # Bucle infinito
     # Dibujar la curva completa desde 0 hasta theta
     for t in np.arange(0, theta, theta_increment):
         # Calcular las coordenadas paramétricas (x, y) para la curva de Limacon
-        r = a + b * np.cos(k * t)
+        r = a * np.cos(k * t)  # esto controla el número de pétalos
         x = int(center_x + r * np.cos(t))
         y = int(center_y + r * np.sin(t))
+
         
         # Dibujar un círculo en la posición calculada
         cv2.circle(img, (x, y), 2, (0, 234, 0), 2)  # Color rojo
